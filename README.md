@@ -1,0 +1,2 @@
+# TouchDemo
+这是关于View滑动事件冲突的demo，里面讲解怎样解决View滑动冲突，包括ViewPager，ScrollView  嵌套ViewPager滑动冲突解决
