@@ -33,6 +33,12 @@ public abstract class BaseFragment extends Fragment {
     private Context mContext;
 
     @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mContext=context;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
@@ -43,7 +49,6 @@ public abstract class BaseFragment extends Fragment {
             Bundle savedInstanceState) {
         LUtils.i(this.getClass().getSimpleName()+"<<<<<<<<<<<<   onCreateView");
         if(mView==null){
-            mContext = getActivity();
             mView=View.inflate(mContext,getLayoutId(),null);
         }else{
             ViewGroup parent =(ViewGroup) mView.getParent();
@@ -101,7 +106,7 @@ public abstract class BaseFragment extends Fragment {
 
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
-        LUtils.i(this.getClass().getSimpleName()+"<<<<<<<<<<<<   setUserVisibleHint"+isVisibleToUser);
+//        LUtils.i(this.getClass().getSimpleName()+"<<<<<<<<<<<<   setUserVisibleHint"+isVisibleToUser);
         super.setUserVisibleHint(isVisibleToUser);
         this.mIsVisibleToUser = isVisibleToUser;
         prepareFetchData();
