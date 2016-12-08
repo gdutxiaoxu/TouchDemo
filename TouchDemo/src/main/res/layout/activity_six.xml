@@ -7,21 +7,19 @@
     android:layout_height="match_parent"
     android:background="@android:color/background_light"
     android:fitsSystemWindows="true"
->
+    >
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:fitsSystemWindows="true"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
 
-    >
+        >
 
 
-        <android.support.design.widget.CollapsingToolbarLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_scrollFlags="scroll|snap">
+            app:layout_scrollFlags="scroll">
 
 
             <android.support.v4.view.ViewPager
@@ -29,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
-            >
+                >
 
             </android.support.v4.view.ViewPager>
 
@@ -42,7 +40,7 @@
                 android:text="1/10"
                 android:textColor="#000"/>
 
-        </android.support.design.widget.CollapsingToolbarLayout>
+        </FrameLayout>
 
     </android.support.design.widget.AppBarLayout>
 
