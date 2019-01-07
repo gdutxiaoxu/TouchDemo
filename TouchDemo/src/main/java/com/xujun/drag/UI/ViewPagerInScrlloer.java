@@ -4,14 +4,11 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.xujun.drag.BaseViewPagerAdapter;
-import com.xujun.drag.ItemAdapter;
 import com.xujun.drag.R;
-import com.xujun.drag.base.RecyclerUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,11 +22,8 @@ public class ViewPagerInScrlloer extends AppCompatActivity {
     ViewPager mViewPager;
     TextView mTextView;
 
-    RecyclerView mRecyclerView;
     private List<Fragment> mFragments;
     private BaseViewPagerAdapter mBaseViewPagerAdapter;
-    private ArrayList<String> mList;
-    private ItemAdapter mItemAdapter;
 
     ScrollView mNoHorizontalScrollView;
     private boolean first = true;
@@ -69,20 +63,10 @@ public class ViewPagerInScrlloer extends AppCompatActivity {
     private void initView() {
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
         mTextView = (TextView) findViewById(R.id.tv_page);
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         mNoHorizontalScrollView = (ScrollView) findViewById(R.id.NoHorizontalScrollView);
     }
 
     private void initData() {
-
-        mList = new ArrayList<>();
-        for (int i = 0; i < 30; i++) {
-            String s = String.format("我是第%d个测试Item", i);
-            mList.add(s);
-        }
-        mItemAdapter = new ItemAdapter(this, mList);
-        RecyclerUtils.init(mRecyclerView);
-        mRecyclerView.setAdapter(mItemAdapter);
 
         mFragments = new ArrayList<>();
         for (int i = 0; i < 8; i++) {

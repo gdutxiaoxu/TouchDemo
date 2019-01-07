@@ -29,8 +29,6 @@
         </activity>
         <activity android:name=".UI.FourActivity">
         </activity>
-        <activity android:name=".UI.CoordinatorLayoutActivity">
-        </activity>
         <activity android:name=".UI.ViewPagerActivity">
         </activity>
         <activity android:name=".UI.SixActivity">

@@ -21,7 +21,6 @@ public class RecyclerUtils {
 
         RecyclerView.LayoutManager layoutManager = recyclerView.getLayoutManager();
         if(layoutManager ==null){
-
             layoutManager=new  LinearLayoutManager(context);
             DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(context,
                     LinearLayoutManager.VERTICAL);
