@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn_third:
-                jump(ViewPagerInScrlloer.class);
+                jump(ThreeActivity.class);
                 break;
 
             case R.id.btn_four:
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn_five:
-                jump(ViewPagerActivity.class);
+                jump(FiveActivity.class);
                 break;
 
             case R.id.btn_six:

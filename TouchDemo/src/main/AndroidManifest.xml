@@ -25,11 +25,11 @@
         </activity>
         <activity android:name=".UI.SecondActivity">
         </activity>
-        <activity android:name=".UI.ViewPagerInScrlloer">
+        <activity android:name=".UI.ThreeActivity">
         </activity>
         <activity android:name=".UI.FourActivity">
         </activity>
-        <activity android:name=".UI.ViewPagerActivity">
+        <activity android:name=".UI.FiveActivity">
         </activity>
         <activity android:name=".UI.SixActivity">
         </activity>

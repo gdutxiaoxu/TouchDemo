@@ -12,7 +12,7 @@ import com.xujun.drag.R;
 
 import java.util.ArrayList;
 
-public class ViewPagerActivity extends AppCompatActivity {
+public class FiveActivity extends AppCompatActivity {
 
     ViewPager mViewPager;
     TabLayout mTabLayout;

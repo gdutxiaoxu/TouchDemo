@@ -9,36 +9,39 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <FrameLayout
+        <com.xujun.drag.widget.ChildViewPager
+            android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="350dp">
 
-            <TextView
-                android:id="@+id/tv_page"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:background="@android:color/darker_gray"
-                android:gravity="right"
-                android:padding="10dp"
-                android:text="1/10" />
+        </com.xujun.drag.widget.ChildViewPager>
 
-            <com.xujun.drag.widget.ChildViewPager
-                android:id="@+id/viewPager"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </com.xujun.drag.widget.ChildViewPager>
-
-        </FrameLayout>
-
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerView"
+        <TextView
+            android:id="@+id/tv_page"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@android:color/darker_gray"
+            android:gravity="right"
+            android:padding="10dp"
+            android:text="1/10" />
 
-        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/holo_green_light"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@android:color/holo_green_light"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textSize="20dp" />
 
 
     </LinearLayout>

@@ -18,7 +18,7 @@ import java.util.List;
  * @explain 这个Activity是用来演示ScrollView里面嵌套ViewPager的外部解决法的
  * @time 2016/10/25 15:43.
  */
-public class ViewPagerInScrlloer extends AppCompatActivity {
+public class ThreeActivity extends AppCompatActivity {
     ViewPager mViewPager;
     TextView mTextView;
 
