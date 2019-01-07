@@ -55,6 +55,5 @@ public class ViewPagerActivity extends AppCompatActivity {
     private void initView() {
         mViewPager=(ViewPager)findViewById(R.id.viewPager);
         mTabLayout=(TabLayout)findViewById(R.id.tabs);
-
     }
 }

@@ -27,14 +27,14 @@ public class SecondActivity extends AppCompatActivity {
         mTextView = (TextView) findViewById(R.id.tv_page);
         mFragments = new ArrayList<>();
 
-        mViewPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener(){
+        mViewPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
-                mTextView.setText(String.format("%d/8",position+1));
+                mTextView.setText(String.format("%d/8", position + 1));
             }
         });
 
-        for(int i=0;i<8;i++){
+        for (int i = 0; i < 8; i++) {
             ImageFragment imageFragment = ImageFragment.newInstance(R.drawable.huoying);
             mFragments.add(imageFragment);
         }

@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_first:
                 jump(FirstActivity.class);
                 break;
+
             case R.id.btn_second:
                 jump(SecondActivity.class);
                 break;

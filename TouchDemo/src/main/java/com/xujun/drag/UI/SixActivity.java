@@ -21,14 +21,11 @@ public class SixActivity extends AppCompatActivity {
 
     ViewPager mViewPager;
     TextView mTextView;
-
     RecyclerView mRecyclerView;
-    private List<Fragment> mFragments;
 
+    private List<Fragment> mFragments;
     private ArrayList<String> mList;
     private ItemAdapter mItemAdapter;
-
-
 
     private BaseFragmentAdapter mBaseFragmentAdapter;
 
@@ -37,10 +34,7 @@ public class SixActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_six);
         initView();
-
-
         initListener();
-
         initData();
     }
 
@@ -63,8 +57,6 @@ public class SixActivity extends AppCompatActivity {
     }
 
     private void initData() {
-
-
         mList = new ArrayList<>();
         for (int i = 0; i < 30; i++) {
             String s = String.format("我是第%d个测试Item", i);
@@ -79,8 +71,8 @@ public class SixActivity extends AppCompatActivity {
             ImageFragment imageFragment = ImageFragment.newInstance(R.drawable.huoying);
             mFragments.add(imageFragment);
         }
-        mBaseFragmentAdapter = new BaseFragmentAdapter(getSupportFragmentManager(), mFragments);
 
+        mBaseFragmentAdapter = new BaseFragmentAdapter(getSupportFragmentManager(), mFragments);
         mViewPager.setAdapter(mBaseFragmentAdapter);
 
     }

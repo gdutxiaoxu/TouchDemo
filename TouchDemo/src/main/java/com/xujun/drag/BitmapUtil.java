@@ -1,14 +1,5 @@
 package com.xujun.drag;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.URL;
-import java.net.URLEncoder;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
@@ -18,7 +9,17 @@ import android.os.Environment;
 import android.os.StatFs;
 import android.util.Log;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
+import java.net.URLEncoder;
+
 public class BitmapUtil {
+
     /**
      * 读取本地资源的图片
      *
@@ -173,7 +174,9 @@ public class BitmapUtil {
         return file.exists();
     }
 
-    /** * 计算sdcard上的剩余空间 * @return */
+    /**
+     * 计算sdcard上的剩余空间 * @return
+     */
     private static int freeSpaceOnSd() {
         StatFs stat = new StatFs(Environment.getExternalStorageDirectory()
                 .getPath());

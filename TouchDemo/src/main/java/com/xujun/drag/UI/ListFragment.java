@@ -50,7 +50,6 @@ public class ListFragment extends BaseFragment {
     private int mScrollX;
 
     public static ListFragment newInstance(String title) {
-
         ListFragment listFragment = new ListFragment();
         Bundle bundle = new Bundle();
         bundle.putString(key, title);
@@ -75,8 +74,6 @@ public class ListFragment extends BaseFragment {
     public void fetchData() {
         Log.i(TAG, "fetchData: mTitle =" + mTitle);
         int scrollY = mNoHorizontalScrollView.getScrollY();
-
-
     }
 
     /**
@@ -105,7 +102,6 @@ public class ListFragment extends BaseFragment {
                 mScrollY = mNoHorizontalScrollView.getScrollY();
                 Log.i(TAG, "setUserVisibleHint: mTitle=" + mTitle + "  " + " isVisibleToUser=" +
                         isVisibleToUser + "mScrollY=" + mScrollY);
-
             }
         }
     }
@@ -118,8 +114,6 @@ public class ListFragment extends BaseFragment {
                 mTextView.setText(String.format("%d/" + mSize, position + 1));
             }
         });
-
-
     }
 
     @Override
@@ -156,13 +150,10 @@ public class ListFragment extends BaseFragment {
       /*  mViewPager.setFocusable(true);
         mViewPager.setFocusableInTouchMode(true);
         mViewPager.requestFocus();*/
-
-
     }
 
     public void onSelected() {
 
     }
-
 
 }

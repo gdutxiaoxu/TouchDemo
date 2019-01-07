@@ -21,7 +21,7 @@ public class ItemAdapter extends BaseRecyclerAdapter<String> {
 
     @Override
     public void convert(BaseRecyclerHolder holder, String item, int position) {
-        TextView tv=holder.getView(R.id.tv);
+        TextView tv = holder.getView(R.id.tv);
         String s = mDatas.get(position);
         tv.setText(s);
     }

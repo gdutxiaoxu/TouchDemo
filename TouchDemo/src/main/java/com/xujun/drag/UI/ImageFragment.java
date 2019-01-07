@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.xujun.drag.DragImageView;
 import com.xujun.drag.R;
 
 /**
@@ -22,13 +21,13 @@ public class ImageFragment extends Fragment {
     private Context mContext;
     ImageView mDragImageView;
 
-   public static final String KEY="imageId";
-    private int mImageId=-1;
+    public static final String KEY = "imageId";
+    private int mImageId = -1;
 
-    public static ImageFragment newInstance(int imageId){
+    public static ImageFragment newInstance(int imageId) {
         ImageFragment imageFragment = new ImageFragment();
         Bundle bundle = new Bundle();
-        bundle.putInt(KEY,imageId);
+        bundle.putInt(KEY, imageId);
         imageFragment.setArguments(bundle);
         return imageFragment;
     }
@@ -39,7 +38,7 @@ public class ImageFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         mContext = container.getContext();
         View view = View.inflate(mContext, R.layout.fragment_image, null);
-        mDragImageView=(ImageView)view.findViewById(R.id.imageView);
+        mDragImageView = (ImageView) view.findViewById(R.id.imageView);
         return view;
     }
 
@@ -47,9 +46,9 @@ public class ImageFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Bundle arguments = getArguments();
-        if(arguments!=null){
+        if (arguments != null) {
             mImageId = arguments.getInt(KEY, -1);
-            if(mImageId !=-1){
+            if (mImageId != -1) {
                 mDragImageView.setImageResource(mImageId);
             }
         }

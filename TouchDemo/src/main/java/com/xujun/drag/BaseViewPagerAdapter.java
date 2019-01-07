@@ -19,16 +19,14 @@ public class BaseViewPagerAdapter extends FragmentPagerAdapter {
     String[] mtitles;
 
     public BaseViewPagerAdapter(FragmentManager fm, List<Fragment> fragments) {
-        this(fm,fragments,null);
+        this(fm, fragments, null);
     }
 
-    public BaseViewPagerAdapter(FragmentManager fm, List<Fragment> fragments,String[] mtitles) {
+    public BaseViewPagerAdapter(FragmentManager fm, List<Fragment> fragments, String[] mtitles) {
         super(fm);
         this.mFragments = fragments;
-        this.mtitles=mtitles;
+        this.mtitles = mtitles;
     }
-
-
 
     @Override
     public Fragment getItem(int position) {

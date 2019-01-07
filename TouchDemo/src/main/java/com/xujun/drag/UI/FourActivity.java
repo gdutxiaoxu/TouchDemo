@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FourActivity extends AppCompatActivity {
+
     ViewPager mViewPager;
     TextView mTextView;
 

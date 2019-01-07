@@ -31,31 +31,28 @@ public class ViewPagerInScrlloer extends AppCompatActivity {
     private ArrayList<String> mList;
     private ItemAdapter mItemAdapter;
 
-   ScrollView mNoHorizontalScrollView;
-    private boolean first=true;
+    ScrollView mNoHorizontalScrollView;
+    private boolean first = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_pager_in_scrlloer);
         initView();
-
-
         initListener();
-
         initData();
     }
 
 
     private void scroll() {
-        mNoHorizontalScrollView.scrollTo(0,0);
+        mNoHorizontalScrollView.scrollTo(0, 0);
     }
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        if(hasFocus  && first){
-            first=false;
+        if (hasFocus && first) {
+            first = false;
             scroll();
         }
     }
@@ -67,18 +64,16 @@ public class ViewPagerInScrlloer extends AppCompatActivity {
                 mTextView.setText(String.format("%d/8", position + 1));
             }
         });
-
     }
 
     private void initView() {
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
         mTextView = (TextView) findViewById(R.id.tv_page);
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        mNoHorizontalScrollView=(ScrollView) findViewById(R.id.NoHorizontalScrollView);
+        mNoHorizontalScrollView = (ScrollView) findViewById(R.id.NoHorizontalScrollView);
     }
 
     private void initData() {
-
 
         mList = new ArrayList<>();
         for (int i = 0; i < 30; i++) {

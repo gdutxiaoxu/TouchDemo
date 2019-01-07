@@ -60,23 +60,31 @@ public class LUtils {
 
     public interface CustomLogger {
         void d(String tag, String content);
+
         void d(String tag, String content, Throwable e);
 
         void e(String tag, String content);
+
         void e(String tag, String content, Throwable e);
 
         void i(String tag, String content);
+
         void i(String tag, String content, Throwable e);
 
         void v(String tag, String content);
+
         void v(String tag, String content, Throwable e);
 
         void w(String tag, String content);
+
         void w(String tag, String content, Throwable e);
+
         void w(String tag, Throwable tr);
 
         void wtf(String tag, String content);
+
         void wtf(String tag, String content, Throwable e);
+
         void wtf(String tag, Throwable tr);
     }
 
@@ -390,7 +398,7 @@ public class LUtils {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-       }
+        }
     }
 
     private static class ReusableFormatter {

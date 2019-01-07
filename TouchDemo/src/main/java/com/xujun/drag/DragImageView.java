@@ -52,12 +52,13 @@ public class DragImageView extends ImageView {
      * 模式 NONE：无 DRAG：拖拽. ZOOM:缩放
      *
      * @author zhangjia
-     *
      */
     private enum MODE {
         NONE, DRAG, ZOOM
 
-    };
+    }
+
+    ;
 
     private MODE mode = MODE.NONE;// 默认模式
 
@@ -71,7 +72,9 @@ public class DragImageView extends ImageView {
 
     private MyAsyncTask myAsyncTask;// 异步动画
 
-    /** 构造方法 **/
+    /**
+     * 构造方法
+     **/
     public DragImageView(Context context) {
         super(context);
     }
@@ -80,12 +83,16 @@ public class DragImageView extends ImageView {
         this.mActivity = mActivity;
     }
 
-    /** 可见屏幕宽度 **/
+    /**
+     * 可见屏幕宽度
+     **/
     public void setScreen_W(int screen_W) {
         this.screen_W = screen_W;
     }
 
-    /** 可见屏幕高度 **/
+    /**
+     * 可见屏幕高度
+     **/
     public void setScreen_H(int screen_H) {
         this.screen_H = screen_H;
     }
@@ -127,8 +134,8 @@ public class DragImageView extends ImageView {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
-        int x= (int) event.getY();
-        int y= (int) event.getX();
+        int x = (int) event.getY();
+        int y = (int) event.getX();
         switch (event.getAction()) {
 
             case MotionEvent.ACTION_DOWN:
@@ -140,9 +147,9 @@ public class DragImageView extends ImageView {
                 break;
 
             case MotionEvent.ACTION_MOVE:
-                if(mode!=MODE.NONE){
+                if (mode != MODE.NONE) {
                     getParent().requestDisallowInterceptTouchEvent(true);
-                }else{
+                } else {
                     getParent().requestDisallowInterceptTouchEvent(false);
                 }
 
@@ -161,31 +168,31 @@ public class DragImageView extends ImageView {
      */
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.i(TAG, "onTouchEvent:=" );
+        Log.i(TAG, "onTouchEvent:=");
         /** 处理单点、多点触摸 **/
         switch (event.getAction() & MotionEvent.ACTION_MASK) {
             case MotionEvent.ACTION_DOWN:
-                Log.i(TAG, "onTouchEvent:=  ACTION_DOWN" );
+                Log.i(TAG, "onTouchEvent:=  ACTION_DOWN");
                 onTouchDown(event);
                 break;
             // 多点触摸
             case MotionEvent.ACTION_POINTER_DOWN:
-                Log.i(TAG, "onTouchEvent:=  ACTION_POINTER_DOWN" );
+                Log.i(TAG, "onTouchEvent:=  ACTION_POINTER_DOWN");
                 onPointerDown(event);
                 break;
 
             case MotionEvent.ACTION_MOVE:
-                Log.i(TAG, "onTouchEvent:=  ACTION_MOVE" );
+                Log.i(TAG, "onTouchEvent:=  ACTION_MOVE");
                 onTouchMove(event);
                 break;
             case MotionEvent.ACTION_UP:
-                Log.i(TAG, "onTouchEvent:=  ACTION_UP" );
+                Log.i(TAG, "onTouchEvent:=  ACTION_UP");
                 mode = MODE.NONE;
                 break;
 
             // 多点松开
             case MotionEvent.ACTION_POINTER_UP:
-                Log.i(TAG, "onTouchEvent:=  ACTION_POINTER_UP" );
+                Log.i(TAG, "onTouchEvent:=  ACTION_POINTER_UP");
                 mode = MODE.NONE;
                 /** 执行缩放还原 **/
                 if (isScaleAnim) {
@@ -197,7 +204,9 @@ public class DragImageView extends ImageView {
         return true;
     }
 
-    /** 按下 **/
+    /**
+     * 按下
+     **/
     void onTouchDown(MotionEvent event) {
         mode = MODE.DRAG;
 
@@ -209,15 +218,19 @@ public class DragImageView extends ImageView {
 
     }
 
-    /** 两个手指 只能放大缩小 **/
+    /**
+     * 两个手指 只能放大缩小
+     **/
     void onPointerDown(MotionEvent event) {
-      if   (event.getPointerCount() == 2) {
+        if (event.getPointerCount() == 2) {
             mode = MODE.ZOOM;
             beforeLenght = getDistance(event);// 获取两点的距离
         }
     }
 
-    /** 移动的处理 **/
+    /**
+     * 移动的处理
+     **/
     void onTouchMove(MotionEvent event) {
         int left = 0, top = 0, right = 0, bottom = 0;
         /** 处理拖动 **/
@@ -285,7 +298,9 @@ public class DragImageView extends ImageView {
 
     }
 
-    /** 获取两点的距离 **/
+    /**
+     * 获取两点的距离
+     **/
     float getDistance(MotionEvent event) {
         float x = event.getX(0) - event.getX(1);
         float y = event.getY(0) - event.getY(1);
@@ -293,12 +308,16 @@ public class DragImageView extends ImageView {
         return (float) Math.sqrt(x * x + y * y);
     }
 
-    /** 实现处理拖动 **/
+    /**
+     * 实现处理拖动
+     **/
     private void setPosition(int left, int top, int right, int bottom) {
         this.layout(left, top, right, bottom);
     }
 
-    /** 处理缩放 **/
+    /**
+     * 处理缩放
+     **/
     void setScale(float scale) {
         int disX = (int) (this.getWidth() * Math.abs(1 - scale)) / 4;// 获取缩放水平距离
         int disY = (int) (this.getHeight() * Math.abs(1 - scale)) / 4;// 获取缩放垂直距离
@@ -410,7 +429,9 @@ public class DragImageView extends ImageView {
 
         private float scale_WH;// 宽高的比例
 
-        /** 当前的位置属性 **/
+        /**
+         * 当前的位置属性
+         **/
         public void setLTRB(int left, int top, int right, int bottom) {
             this.left = left;
             this.top = top;
@@ -448,8 +469,8 @@ public class DragImageView extends ImageView {
                 top = Math.max(top, start_Top);
                 right = Math.min(right, start_Right);
                 bottom = Math.min(bottom, start_Bottom);
-                Log.e("jj", "top="+top+",bottom="+bottom+",left="+left+",right="+right);
-                publishProgress(new Integer[] { left, top, right, bottom });
+                Log.e("jj", "top=" + top + ",bottom=" + bottom + ",left=" + left + ",right=" + right);
+                publishProgress(new Integer[]{left, top, right, bottom});
                 try {
                     Thread.sleep(10);
                 } catch (InterruptedException e) {

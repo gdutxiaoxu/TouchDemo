@@ -1,7 +1,5 @@
 package com.xujun.drag.UI;
 
-import java.io.InputStream;
-
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -17,7 +15,10 @@ import com.xujun.drag.BitmapUtil;
 import com.xujun.drag.DragImageView;
 import com.xujun.drag.R;
 
+import java.io.InputStream;
+
 public class FirstActivity extends Activity {
+
     private int window_width, window_height;// 控件宽度
     private DragImageView dragImageView;// 自定义控件
     private int state_height;// 状态栏的高度
@@ -53,7 +54,7 @@ public class FirstActivity extends Activity {
                             getWindow().getDecorView()
                                     .getWindowVisibleDisplayFrame(frame);
                             state_height = frame.top;
-                            dragImageView.setScreen_H(window_height-state_height);
+                            dragImageView.setScreen_H(window_height - state_height);
                             dragImageView.setScreen_W(window_width);
                         }
 
