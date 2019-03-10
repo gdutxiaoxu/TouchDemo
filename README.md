@@ -1,4 +1,13 @@
-# ViewPager，ScrollView  嵌套ViewPager滑动冲突解决
+## 微信公众号
+
+**Android 技术人，希望让你看到程序猿不同的一面，除了分享 Coding，，还有职场心得，面试经验，学习心得，人生感悟等等。希望通过该公众号，让大家看到，我们不只会敲代码，我们还会。。。。。。**
+
+![Android 技术人](http://upload-images.jianshu.io/upload_images/2050203-bf3eca3c1cf265e4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+
+
+## ViewPager，ScrollView  嵌套ViewPager滑动冲突解决
 
 这篇博客主要讲解一下几个问题
 - 粗略地介绍一下View的事件分发机制
