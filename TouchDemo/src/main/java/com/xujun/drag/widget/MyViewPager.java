@@ -32,7 +32,7 @@ public class MyViewPager extends ViewPager {
         int y = (int) ev.getRawY();
         int dealtX = 0;
         int dealtY = 0;
-
+        Log.i(TAG, "dispatchTouchEvent: ev=" + ev);
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 dealtX = 0;

@@ -3,6 +3,7 @@ package com.xujun.drag.widget;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.ScrollView;
 
@@ -13,6 +14,8 @@ import android.widget.ScrollView;
  * @ email：gdutxiaoxu@163.com
  */
 public class VerticalScrollView extends ScrollView {
+
+    private static final String TAG = "VerticalScrollView";
 
     public VerticalScrollView(Context context) {
         super(context);
@@ -50,6 +53,7 @@ public class VerticalScrollView extends ScrollView {
             case MotionEvent.ACTION_MOVE:
                 final float deltaX = Math.abs(x - mDownPosX);
                 final float deltaY = Math.abs(y - mDownPosY);
+                Log.i(TAG, "onInterceptTouchEvent: deltaX =" + deltaX + "； deltaY is " + deltaY);
                 // 这里是够拦截的判断依据是左右滑动，读者可根据自己的逻辑进行是否拦截
                 if (deltaX > deltaY) {
                     return false;
