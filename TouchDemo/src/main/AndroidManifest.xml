@@ -1,38 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.xujun.drag"
-          xmlns:android="http://schemas.android.com/apk/res/android"
-          android:versionCode="1"
-          android:versionName="1.0">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xujun.drag"
+    android:versionCode="1"
+    android:versionName="1.0">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+        <activity android:name=".gesture.GestureDemoActivity"></activity>
+        <activity android:name=".multiclick.MultiClickActivity" />
         <activity
             android:name=".UI.FirstActivity"
-            android:label="@string/app_name">
-        </activity>
+            android:label="@string/app_name" />
         <activity android:name=".UI.MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UI.SecondActivity">
-        </activity>
-        <activity android:name=".UI.ThreeActivity">
-        </activity>
-        <activity android:name=".UI.FourActivity">
-        </activity>
-        <activity android:name=".UI.FiveActivity">
-        </activity>
-        <activity android:name=".UI.SixActivity">
-        </activity>
+        <activity android:name=".UI.SecondActivity" />
+        <activity android:name=".UI.ThreeActivity" />
+        <activity android:name=".UI.FourActivity" />
+        <activity android:name=".UI.FiveActivity" />
+        <activity android:name=".UI.SixActivity" />
     </application>
 
 </manifest>

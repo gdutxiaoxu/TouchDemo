@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.xujun.drag.R;
+import com.xujun.drag.gesture.GestureDemoActivity;
+import com.xujun.drag.multiclick.MultiClickActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_six:
                 jump(SixActivity.class);
                 break;
+
+            case R.id.btn_seven:
+                jump(MultiClickActivity.class);
+                break;
+
+            case R.id.btn_gesture:
+                jump(GestureDemoActivity.class);
             default:
                 break;
 

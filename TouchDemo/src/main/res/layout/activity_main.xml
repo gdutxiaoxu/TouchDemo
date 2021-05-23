@@ -48,4 +48,20 @@
         android:onClick="onButtonClick"
         android:text="CoordinatorLayout Activity" />
 
+    <Button
+        android:id="@+id/btn_seven"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onButtonClick"
+        android:text="测试多击事件" />
+
+
+    <Button
+        android:id="@+id/btn_gesture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onButtonClick"
+        android:text="手势识别" />
+
+
 </LinearLayout>
